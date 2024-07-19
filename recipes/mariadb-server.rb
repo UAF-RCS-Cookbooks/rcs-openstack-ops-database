@@ -30,7 +30,7 @@ listen_address =
 
 super_password = get_password 'db', node['openstack']['db']['root_user_key']
 
-include_recipe 'openstack-ops-database::mariadb-client'
+include_recipe 'rcs-openstack-ops-database::mariadb-client'
 
 mariadb_server_install 'default' do
   version node['openstack']['mariadb']['version']

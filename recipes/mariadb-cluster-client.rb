@@ -15,4 +15,4 @@
 # limitations under the License.
 #
 
-include_recipe 'openstack-ops-database::mariadb-client'
+include_recipe 'rcs-openstack-ops-database::mariadb-client'
