@@ -40,7 +40,7 @@ mariadb_server_install 'default' do
 end
 
 # Using this to generate a service resource to control
-service 'mysql' do
+service ' mariadb' do
   supports restart: true, status: true, reload: true
   action :nothing
 end
