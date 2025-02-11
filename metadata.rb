@@ -3,13 +3,13 @@ maintainer       'UAF RCS'
 maintainer_email 'chef@rcs.alaska.edu'
 license          'Apache-2.0'
 description      'Provides the shared database configuration for OpenStack'
-version          '20.0.0'
+version          '21.0.1'
 
 %w(ubuntu redhat centos).each do |os|
   supports os
 end
 
-depends 'rcs-openstack-common', '>= 20.0.0'
-depends 'mariadb', '~> 5.0'
+depends 'rcs-openstack-common'
+depends 'mariadb', '~> 6.2.0'
 
 chef_version '>= 16.0'
