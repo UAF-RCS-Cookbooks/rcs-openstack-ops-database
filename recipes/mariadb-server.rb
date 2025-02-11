@@ -69,7 +69,7 @@ mariadb_server_configuration 'default' do
     'character-set-server' => node['openstack']['mysql']['character-set-server']
   )
   version node['openstack']['mariadb']['version']
-  notifies :restart, 'service[mysql]', :immediately
+  notifies :restart, 'service[mariadb]', :immediately
 end
 
 # Remove anonymous localhost user
