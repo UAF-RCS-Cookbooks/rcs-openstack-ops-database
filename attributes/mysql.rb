@@ -18,9 +18,9 @@
 # MySQL attributes that we select defaults for:
 
 # MariaDB version
-default['openstack']['mariadb']['version'] = '10.3'
+default['openstack']['mariadb']['version'] = '10.5'
 # Whether to set up mariadb repo
-default['openstack']['mariadb']['setup_repo'] = true
+default['openstack']['mariadb']['setup_repo'] = false
 # Storage engine, base OpenStack requires the InnoDB flavor
 default['openstack']['mysql']['default-storage-engine'] = 'InnoDB'
 # InnoDB lock mode for generating auto-increment values
