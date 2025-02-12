@@ -40,7 +40,7 @@ mariadb_server_install 'default' do
 end
 
 # Using this to generate a service resource to control
-service ' mariadb' do
+service 'mariadb' do
   supports restart: true, status: true, reload: true
   action :nothing
 end
@@ -69,7 +69,7 @@ mariadb_server_configuration 'default' do
     'character-set-server' => node['openstack']['mysql']['character-set-server']
   )
   version node['openstack']['mariadb']['version']
-  # notifies :restart, 'service[mariadb]', :immediately
+  notifies :restart, 'service[mariadb]', :immediately
 end
 
 # Remove anonymous localhost user
