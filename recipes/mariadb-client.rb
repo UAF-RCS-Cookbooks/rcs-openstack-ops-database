@@ -15,10 +15,10 @@
 # limitations under the License.
 #
 
-mariadb_client_install 'default' do
-  version node['openstack']['mariadb']['version']
-  # setup_repo node['openstack']['mariadb']['setup_repo']
-end
+# mariadb_client_install 'default' do
+#   version node['openstack']['mariadb']['version']
+#   setup_repo node['openstack']['mariadb']['setup_repo']
+# end
 
 node['openstack']['db']['python_packages']['mariadb'].each do |pkg|
   package pkg
