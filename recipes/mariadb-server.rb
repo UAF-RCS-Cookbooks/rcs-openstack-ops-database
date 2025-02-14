@@ -32,12 +32,12 @@ super_password = get_password 'db', node['openstack']['db']['root_user_key']
 
 include_recipe 'rcs-openstack-ops-database::mariadb-client'
 
-# mariadb_server_install 'default' do
-#   version node['openstack']['mariadb']['version']
-#   password super_password
-#   setup_repo node['openstack']['mariadb']['setup_repo']
-#   action [:install, :create]
-# end
+mariadb_server_install 'default' do
+  version node['openstack']['mariadb']['version']
+  password super_password
+  setup_repo node['openstack']['mariadb']['setup_repo']
+  action [:install, :create]
+end
 
 # Using this to generate a service resource to control
 service 'mariadb' do
