@@ -3,7 +3,7 @@ maintainer       'UAF RCS'
 maintainer_email 'chef@rcs.alaska.edu'
 license          'Apache-2.0'
 description      'Provides the shared database configuration for OpenStack'
-version          '21.0.13'
+version          '21.0.14'
 
 %w(ubuntu redhat centos).each do |os|
   supports os
